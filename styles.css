@@ -22,12 +22,12 @@ body {
 }
 .container {
   position: relative;
-  width: 644px;
-  height: 523px;
+  max-width: 644px;
+  /* height: 523px; */
 }
 .card {
-  width: 644px;
-  height: 523px;
+  max-width: 644px;
+  /* height: 523px; */
   padding: 70px;
   border-radius: 15px;
   backdrop-filter: blur(15px);
@@ -40,6 +40,7 @@ body {
 
 .details {
   display: flex;
+  flex-wrap: wrap;
   column-gap: 70px;
   row-gap: 30px;
   margin: 20px 0px;
@@ -80,6 +81,7 @@ body {
   color: #ffffff;
   font-family: inherit;
   font-size: inherit;
+  margin-bottom: 60px;
 }
 
 .icon {
@@ -146,5 +148,17 @@ body {
   }
   50% {
     left: calc(-100px + 37px);
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    padding: 20px;
+  }
+  .card {
+    padding: 30px;
+  }
+  .square {
+    display: none;
   }
 }
