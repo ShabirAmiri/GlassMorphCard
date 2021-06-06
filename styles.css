@@ -1,0 +1,150 @@
+*,
+*:before,
+*:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.publish {
+  color: #222224;
+}
+
+body {
+  background: url(/new/glassphorism/web.jfif);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-family: "open sans", sans-serif;
+  /* background-repeat: no-repeat; */
+  /* background-size: cover; */
+}
+.container {
+  position: relative;
+  width: 644px;
+  height: 523px;
+}
+.card {
+  width: 644px;
+  height: 523px;
+  padding: 70px;
+  border-radius: 15px;
+  backdrop-filter: blur(15px);
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 25px 45px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  z-index: 10;
+  position: relative;
+}
+
+.details {
+  display: flex;
+  column-gap: 70px;
+  row-gap: 30px;
+  margin: 20px 0px;
+}
+
+.detailsTitle {
+  margin: 10px 0px;
+  font-weight: bold;
+}
+
+.detailsValue {
+  font-size: 22px;
+}
+
+.tag {
+  display: inline-block;
+  font-size: 15px;
+  font-family: inherit;
+  padding: 5px 10px;
+  border: 1px solid #9cafb7;
+  background-color: #ebf3fb;
+  margin: 5px;
+  border-radius: 5px;
+  backdrop-filter: blur(15px);
+  background: rgba(255, 255, 255, 0.13);
+  box-shadow: 0 25px 45px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+.tagdiv {
+  margin-bottom: 65px;
+}
+
+.btn {
+  border: none;
+  background-color: #2c9c91;
+  padding: 14px 20px;
+  border-radius: 5px;
+  color: #ffffff;
+  font-family: inherit;
+  font-size: inherit;
+}
+
+.icon {
+  margin-right: 10px;
+}
+.square {
+  border-radius: 15px;
+  backdrop-filter: blur(25px);
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 25px 45px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  top: -50px;
+  left: -50px;
+}
+.square:nth-child(2) {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  top: -83px;
+  left: 37px;
+  right: auto;
+  animation: crightleft 1.5s linear infinite;
+}
+.square:nth-child(3) {
+  bottom: -50px;
+  top: auto;
+  left: -50px;
+  z-index: 20;
+  animation: leftright 3s linear infinite;
+}
+.square:nth-child(4) {
+  top: auto;
+  bottom: -50px;
+  left: auto;
+  right: -50px;
+  animation: updown 3s linear infinite;
+}
+
+@keyframes updown {
+  0%,
+  100% {
+    bottom: -50px;
+  }
+  50% {
+    bottom: 200px;
+  }
+}
+@keyframes leftright {
+  0%,
+  100% {
+    left: -50px;
+  }
+  50% {
+    left: calc(100% - 100px);
+  }
+}
+@keyframes crightleft {
+  0%,
+  100% {
+    left: 37px;
+  }
+  50% {
+    left: calc(-100px + 37px);
+  }
+}
